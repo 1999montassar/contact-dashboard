@@ -1,0 +1,54 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <!-- Logo -->
+    <a class="navbar-brand" href="#">
+      <img width="40" height="40" src="public/contact-us-icon.png" class="d-inline-block align-top">
+      Mes Contacts
+    </a>
+
+    <!-- Search Bar -->
+    <form class="d-flex me-3" style="flex-grow: 0.7;">
+      <input class="form-control me-2" type="search" placeholder="Rechercher un contact..." aria-label="Search">
+      <button class="btn btn-outline-primary" type="submit">
+        <i class="bi bi-search"></i>
+      </button>
+    </form>
+
+ <!-- Notifications Button -->
+ <button class="btn btn-outline-warning btn-circle me-2 position-relative" routerLink="notifications">
+  <i class="bi bi-bell"></i>
+  <span class="badge bg-danger position-absolute top-0 start-100 translate-middle"></span>
+</button>
+
+
+<!-- Messages Button -->
+<button class="btn btn-outline-success btn-circle me-2" routerLink="/message-form">
+  <i class="bi bi-envelope"></i>
+</button>
+
+
+
+
+<!-- Settings Button -->
+<a class="btn btn-outline-info btn-circle me-2" href="/settings">
+  <i class="bi bi-gear"></i>
+</a>
+
+<!-- Dark/Light Mode Button -->
+<button class="btn btn-outline-secondary btn-circle me-2" (click)="toggleDarkMode()">
+  <i class="bi" [class.bi-moon]="!isDarkMode" [class.bi-sun]="isDarkMode"></i>
+</button>
+
+<!-- Profile Dropdown -->
+<div class="dropdown">
+  <button class="btn btn-outline-dark btn-circle dropdown-toggle" type="button" id="profileDropdown" data-bs-toggle="dropdown">
+    <i class="bi bi-person-circle"></i>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
+    <li><a class="dropdown-item" href="/mon-compte">Mon compte</a></li>
+    <li><a class="dropdown-item text-danger" href="#" onclick="logout()">Déconnexion</a></li>
+  </ul>
+</div>
+
+  </div>
+</nav>

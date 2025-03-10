@@ -1,0 +1,27 @@
+<div class="sidebar">
+
+  <ul>
+    <li>
+      <a routerLink="/contacts" routerLinkActive="active">Contacts</a>
+    </li>
+
+    <li [class.open]="isMessagesOpen">
+      <a (click)="toggleMessages()">Messages</a>
+      <ul *ngIf="isMessagesOpen">
+        <li>
+          <a routerLink="/messages/sent" routerLinkActive="active">Messages envoyés</a>
+        </li>
+        <li>
+          <a routerLink="/messages/received" routerLinkActive="active">Messages reçus</a>
+        </li>
+        <li>
+          <a routerLink="/messages/favorites" routerLinkActive="active">Favoris</a>
+        </li>
+      </ul>
+    </li>
+
+    <li>
+      <a routerLink="/trash" routerLinkActive="active">Corbeille</a>
+    </li>
+  </ul>
+</div>
